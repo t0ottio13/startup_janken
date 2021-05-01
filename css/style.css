@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 400px;
+    background-color: ivory;
+}
+
+header {
+    margin:0 auto;
+    width: 80%;
+    text-align: center;
+}
+
+main {
+    height: 500px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items : center;
+    flex-direction: column;
+}
+
+.movie {
+    height: 300px;
+    width: 600px;
+    background-image: url(../img/janken_bg.png);
+    background-size: cover;
+}

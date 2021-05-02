@@ -2,7 +2,7 @@
 // 現在のステージ位置を記録する変数
 let currentStage = 0;
 
-// マッチング成功時に、次のステージデータを渡すための関数
+// マッチング成功時に、次のステージデータを示すための関数
 function nextStage() {
     if (currentStage === 0) {
         return "フロントエンドエンジニア面接";

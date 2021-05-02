@@ -17,7 +17,7 @@ header {
 }
 
 main {
-    height: 500px;
+    height: 4000px;
 }
 
 .container {
@@ -27,9 +27,79 @@ main {
     flex-direction: column;
 }
 
-.movie {
-    height: 300px;
+/* ゲーム画面の基本設定 */
+.base_wrapper {
+    height: 400px;
     width: 600px;
+}
+
+.chapter_model {
+    height: 100%;
+    width: 100%;
+}
+
+.screen_model {
+    height: 300px;
+    width: 100%;
+}
+
+.operation_model{
+    display: flex;
+    background-color:dimgray;
+    height: 100px;
+}
+
+/* ここまで ゲーム画面の基本設定 */
+
+/* チャプター00の設定 */
+.screen00 {
     background-image: url(../img/janken_bg.png);
     background-size: cover;
+    height: 300px;
+    width: 100%;
 }
+
+
+.game_title {
+    position: relative;
+    font-size: 40px;
+    top: 44%;
+    left: 24%;
+    color: #FF8C00;
+    background: -webkit-linear-gradient(0deg, #40E0D0, #FF8C00, #FF0080);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.operation00 {
+    align-items: center;
+    justify-content: center;
+}
+
+.start_btn {
+    background-color: white;
+    padding: 5px 5px;
+    border: 1px solid gray;
+    display: inline-block;
+}
+
+.start_btn:active {
+    background-color: yellow;
+    color: tomato;
+}
+
+/* ここまで  スクリーン00の設定 */
+
+
+/* チャプター01の設定 */
+.cp_01_wrapper {
+    display: none;
+}
+
+.screen01 {
+    background-image: url(../img/office_bg.png);
+    background-image: cover;
+}
+
+/* ここまで  スクリーン00の設定 */
+

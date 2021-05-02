@@ -1,7 +1,8 @@
 
-
+// 現在のステージ位置を記録する変数
 let currentStage = 0;
 
+// マッチング成功時に、次のステージデータを渡すための関数
 function nextStage() {
     if (currentStage === 0) {
         return "フロントエンドエンジニア面接";
@@ -16,7 +17,7 @@ function nextStage() {
     }
 }
 
-
+// 面接時、マッチングを判断する関数
 function interview() {
     nextStage();
     const min = 0;
@@ -41,7 +42,7 @@ function interview() {
 }
 
 
-
+// 面接時、選択肢を選ぶための関数
 $('#ui_money_btn').click(function () {
     interview();
     console.log('ステージは' + currentStage + 'になりました');

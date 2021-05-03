@@ -94,6 +94,37 @@ main {
     color: white;
 }
 
+/* 登場人物を出すところ */
+.stage_person {
+    /* background-color: aqua; */
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 登場人物の大きさや距離 */
+.person  {
+    width: 30%;
+    margin-top: 50px;
+    height: 250px;
+    /* background-color: azure; */
+}
+
+/* プレイヤーの画像 */
+.stage_person_left {
+    margin-right: 13%;
+    background-image: url(../img/player_hogehoge.png);
+    background-size: cover;
+}
+
+/* 面接希望者の画像 */
+.stage_person_right {
+    margin-left: 13%;
+    background-image: url(../img/applicant_hoge.png);
+    background-size: cover;
+}
+
 /* 面接スタートのフォント */
 .start_occupation {
     font-size: 40px;
@@ -232,8 +263,8 @@ main {
 }
 .screen03 h5{
 }
-
 /* ここまで  チャプター03の設定 */
+
 
 /*   チャプター04の設定 */
 .cp_04_wrapper {
@@ -242,8 +273,27 @@ main {
 }
 .screen04 h5{
 }
-
 /* ここまで  チャプター04の設定 */
+
+
+/*   チャプター05の設定 */
+.cp_05_wrapper {
+    /* display: none; */
+    background-image: url(../img/office_bg.png);
+}
+.screen05 h5{
+}
+/* ここまで  チャプター05の設定 */
+
+
+/*   チャプター05の設定 */
+.cp_06_wrapper {
+    /* display: none; */
+    background-image: url(../img/office_bg.png);
+}
+.screen06 h5{
+}
+/* ここまで  チャプター05の設定 */
 
 
 

@@ -183,3 +183,157 @@ $('#04_skill_btn').click(function () {
     }
     return;
 })
+// ここまでがChapter04
+
+
+
+// chapter05
+let chapter05_story = 1;
+$('#next_text_btn_05').click(function () {
+    console.log(chapter05_story);
+    if (chapter05_story == 1) {
+        $('#talker05').text("");
+        $('#conversation05').text("");
+        $('.start_occupation').show();
+        chapter05_story = chapter05_story + 1;
+    } else if (chapter05_story == 2) {
+        $('#conversation05').hide();
+        $('.start_occupation').hide();
+        $('#cp_05_choice_box').show();
+        $('#next_text_btn_05').hide();
+    } else {
+        $('.cp_05_wrapper').hide();
+        $('.cp_06_wrapper').show();
+
+    }
+    console.log(chapter05_story);
+});
+
+// 面接の選択肢
+// マッチ成功の時の処理
+function successMatching05() {
+    $('#cp_05_choice_box').hide();
+    $('#next_text_btn_05').show();
+    $('#conversation05').text("採用成功だ！次はインフラエンジニア採用に進もう！");
+    $('#conversation05').show();
+    chapter05_story = chapter05_story + 1;
+    console.log('マッチ成功');
+    console.log('ステージ' + currentStage + 'に進みます。');
+    return;
+}
+
+// マッチ失敗の時の処理
+function missMatching05() {
+    $('#cp_05_choice_box').hide();
+    $('#next_text_btn_05').show();
+    $('#conversation05').text("残念だ、次の応募者に進もう。");
+    $('#conversation05').show();
+    chapter05_story = chapter05_story - 1;
+    console.log('マッチ失敗');
+    console.log('リトライ画面に進みます。')
+}
+
+$('#05_money_btn').click(function () {
+    interview();
+    if (currentStage == 4) {
+        successMatching05();
+    } else {
+        missMatching05();
+    }
+    return;
+})
+$('#05_free_btn').click(function () {
+    interview();
+    if (currentStage == 4) {
+        successMatching05();
+    } else {
+        missMatching05();
+    }
+    return;
+})
+$('#05_skill_btn').click(function () {
+    interview();
+    if (currentStage == 4) {
+        successMatching05();
+    } else {
+        missMatching05();
+    }
+    return;
+})
+// ここまでがChapter05
+
+
+// chapter06
+let chapter06_story = 1;
+$('#next_text_btn_06').click(function () {
+    console.log(chapter06_story);
+    if (chapter06_story == 1) {
+        $('#talker06').text("");
+        $('#conversation06').text("");
+        $('.start_occupation').show();
+        chapter06_story = chapter06_story + 1;
+    } else if (chapter06_story == 2) {
+        $('#conversation06').hide();
+        $('.start_occupation').hide();
+        $('#cp_06_choice_box').show();
+        $('#next_text_btn_06').hide();
+    } else {
+        $('.cp_06_wrapper').hide();
+        $('.cp_07_wrapper').show();
+
+    }
+    console.log(chapter06_story);
+});
+
+// 面接の選択肢
+// マッチ成功の時の処理
+function successMatching06() {
+    $('#cp_06_choice_box').hide();
+    $('#next_text_btn_06').show();
+    $('#conversation06').text("採用成功だ！次は営業採用に進もう！");
+    $('#conversation06').show();
+    chapter06_story = chapter06_story + 1;
+    console.log('マッチ成功');
+    console.log('ステージ' + currentStage + 'に進みます。');
+    return;
+}
+
+// マッチ失敗の時の処理
+function missMatching06() {
+    $('#cp_06_choice_box').hide();
+    $('#next_text_btn_06').show();
+    $('#conversation06').text("残念だ、次の応募者に進もう。");
+    $('#conversation06').show();
+    chapter06_story = chapter06_story - 1;
+    console.log('マッチ失敗');
+    console.log('リトライ画面に進みます。')
+}
+
+$('#06_money_btn').click(function () {
+    interview();
+    if (currentStage == 5) {
+        successMatching06();
+    } else {
+        missMatching06();
+    }
+    return;
+})
+$('#06_free_btn').click(function () {
+    interview();
+    if (currentStage == 5) {
+        successMatching06();
+    } else {
+        missMatching06();
+    }
+    return;
+})
+$('#06_skill_btn').click(function () {
+    interview();
+    if (currentStage == 5) {
+        successMatching06();
+    } else {
+        missMatching06();
+    }
+    return;
+})
+// ここまでがChapter06

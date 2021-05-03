@@ -42,7 +42,7 @@ function interview() {
 }
 
 
-// 面接時、選択肢を選ぶための関数
+// 面接時、選択肢を選ぶための関数 demo
 // $('#ui_money_btn').click(function () {
 //     interview();
 //     console.log('ステージは' + currentStage + 'になりました');

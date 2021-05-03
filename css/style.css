@@ -235,6 +235,16 @@ main {
 
 /* ここまで  チャプター03の設定 */
 
+/*   チャプター04の設定 */
+.cp_04_wrapper {
+    /* display: none; */
+    background-image: url(../img/office_bg.png);
+}
+.screen04 h5{
+}
+
+/* ここまで  チャプター04の設定 */
+
 
 
 

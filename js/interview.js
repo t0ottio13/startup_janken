@@ -1,16 +1,16 @@
 
 // 現在のステージ位置を記録する変数
-let currentStage = 0;
+let currentStage = 1;
 
 // マッチング成功時に、次のステージデータを示すための関数
 function nextStage() {
-    if (currentStage === 0) {
+    if (currentStage === 2) {
         return "フロントエンドエンジニア面接";
-    }else  if ( currentStage === 1){
+    }else  if ( currentStage === 3){
         return "サーバーサイドエンジニア面接";
-    }else  if ( currentStage === 2){
+    }else  if ( currentStage === 4){
         return "インフラエンジニア面接";
-    } else if (currentStage === 3) {
+    } else if (currentStage === 5) {
         return "営業マン面接";
     } else {
         return "採用成功";
@@ -43,20 +43,20 @@ function interview() {
 
 
 // 面接時、選択肢を選ぶための関数
-$('#ui_money_btn').click(function () {
-    interview();
-    console.log('ステージは' + currentStage + 'になりました');
-    return;
-})
-$('#ui_free_btn').click(function () {
-    interview();
-    console.log('ステージは' + currentStage + 'になりました');
-    return;
-})
-$('#ui_skill_btn').click(function () {
-    interview();
-    console.log('ステージは' + currentStage + 'になりました');
-    return;
-})
+// $('#ui_money_btn').click(function () {
+//     interview();
+//     console.log('ステージは' + currentStage + 'になりました');
+//     return;
+// })
+// $('#ui_free_btn').click(function () {
+//     interview();
+//     console.log('ステージは' + currentStage + 'になりました');
+//     return;
+// })
+// $('#ui_skill_btn').click(function () {
+//     interview();
+//     console.log('ステージは' + currentStage + 'になりました');
+//     return;
+// })
 
 

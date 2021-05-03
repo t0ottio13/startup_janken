@@ -286,14 +286,23 @@ main {
 /* ここまで  チャプター05の設定 */
 
 
-/*   チャプター05の設定 */
+/*   チャプター06の設定 */
 .cp_06_wrapper {
     /* display: none; */
     background-image: url(../img/office_bg.png);
 }
 .screen06 h5{
 }
-/* ここまで  チャプター05の設定 */
+/* ここまで  チャプター06の設定 */
+
+/*   チャプター07の設定 */
+.cp_07_wrapper {
+    /* display: none; */
+    background-image: url(../img/office_bg.png);
+}
+.screen07 h5{
+}
+/* ここまで  チャプター07の設定 */
 
 
 

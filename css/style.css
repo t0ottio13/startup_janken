@@ -17,7 +17,8 @@ header {
     text-align: center;
 }
 
-main {
+main{
+    padding-top: 100px;
     height: 4000px;
 }
 
@@ -231,7 +232,7 @@ main {
 
 /* チャプター01の設定 */
 .cp_01_wrapper {
-    /* display: none; */
+    display: none;
     background-image: url(../img/office_bg.png);
 }
 .screen01 {
@@ -243,7 +244,7 @@ main {
 
 /*   チャプター02の設定 */
 .cp_02_wrapper {
-    /* display: none; */
+    display: none;
     background-image: url(../img/office_bg.png);
 }
 .screen02 {
@@ -258,7 +259,7 @@ main {
 
 /*   チャプター03の設定 */
 .cp_03_wrapper {
-    /* display: none; */
+    display: none;
     background-image: url(../img/office_bg.png);
 }
 .screen03 h5{
@@ -268,7 +269,7 @@ main {
 
 /*   チャプター04の設定 */
 .cp_04_wrapper {
-    /* display: none; */
+    display: none;
     background-image: url(../img/office_bg.png);
 }
 .screen04 h5{
@@ -278,7 +279,7 @@ main {
 
 /*   チャプター05の設定 */
 .cp_05_wrapper {
-    /* display: none; */
+    display: none;
     background-image: url(../img/office_bg.png);
 }
 .screen05 h5{
@@ -288,7 +289,7 @@ main {
 
 /*   チャプター06の設定 */
 .cp_06_wrapper {
-    /* display: none; */
+    display: none;
     background-image: url(../img/office_bg.png);
 }
 .screen06 h5{
@@ -297,12 +298,22 @@ main {
 
 /*   チャプター07の設定 */
 .cp_07_wrapper {
-    /* display: none; */
+    display: none;
     background-image: url(../img/office_bg.png);
 }
 .screen07 h5{
 }
 /* ここまで  チャプター07の設定 */
+
+/*   チャプター08の設定 */
+.cp_08_wrapper {
+    display: none;
+    background-image: url(../img/office_bg.png);
+}
+
+.screen08 h5{
+}
+/* ここまで  チャプター08の設定 */
 
 
 

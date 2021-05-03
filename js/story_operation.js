@@ -413,4 +413,29 @@ $('#07_skill_btn').click(function () {
     }
     return;
 })
-// ここまでがChapter06
+// ここまでがChapter07
+
+
+// chapter08
+// let chapter07_story = 1;
+// $('#next_text_btn_07').click(function () {
+//     console.log(chapter07_story);
+//     if (chapter07_story == 1) {
+//         $('#talker07').text("");
+//         $('#conversation07').text("");
+//         $('.start_occupation').show();
+//         chapter07_story = chapter07_story + 1;
+//     } else if (chapter07_story == 2) {
+//         $('#conversation07').hide();
+//         $('.start_occupation').hide();
+//         $('#cp_07_choice_box').show();
+//         $('#next_text_btn_07').hide();
+//     } else {
+//         $('.cp_07_wrapper').hide();
+//         $('.cp_08_wrapper').show();
+
+//     }
+//     console.log(chapter07_story);
+// });
+
+// ここまでがChapter07

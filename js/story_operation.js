@@ -10,15 +10,18 @@ let chapter01_story = 1;
 $('#next_text_btn_01').click(function () {
     console.log(chapter01_story);
     if (chapter01_story == 1) {
-        $('#conversation01').text("このWEBサービスはセカイを大きく変えるかもしれない！");
+        $('#conversation01').text("このWEBアプリはセカイを大きく変えるかもしれない！");
         chapter01_story = chapter01_story + 1;
     }else if( chapter01_story == 2){
-        $('#conversation01').text("しかし、技術が足りない。あのとき、ジーズアカデミーに通っていればよかったのだが。");
+        $('#conversation01').text("しかし、作るには知識も技術も足りない。");
         chapter01_story = chapter01_story + 1;
     } else if (chapter01_story == 3) {
-        $('#conversation01').text("悩んでいてもしかたない、募集を出してチームを作ろう！！");
+        $('#conversation01').text("あのとき、ジーズアカデミーに通っていればよかったのだが。");
         chapter01_story = chapter01_story + 1;
-    } else {
+    } else if (chapter01_story === 4) {
+        $('#conversation01').text("悩んでいてもしかたない、募集を出しながらWEBアプリを作ろう！！");
+        chapter01_story = chapter01_story + 1;
+    }else {
             $('.cp_01_wrapper').hide();
             $('.cp_02_wrapper').show();
     }
@@ -33,21 +36,64 @@ $('#next_text_btn_02').click(function () {
 });
 
 
-// chapter03
+// chapter03 デザイナー編
 let chapter03_story = 1;
 $('#next_text_btn_03').click(function () {
     console.log(chapter03_story);
     if (chapter03_story == 1) {
+        $('#conversation03').text("とりあえずデザインだけでもと思っていたが、全く前に進まない。");
+        chapter03_story = chapter03_story + 1;
+    }else  if (chapter03_story == 2) {
+        $('#conversation03').text("ま、まずい、いきなりつまずいてしまいそうだ。");
+        chapter03_story = chapter03_story + 1;
+    } else if (chapter03_story == 3) {
+        $('#talker03').text("？？？");
+        $('#conversation03').text("どうやら、お困りのようですね。");
+        chapter03_story = chapter03_story + 1;
+    }else if (chapter03_story == 4) {
+        $('#talker03').text("あなた");
+        $('#conversation03').text("！？！？");
+        chapter03_story = chapter03_story + 1;
+    }else if (chapter03_story == 5) {
+        $('#talker03').text("あなた");
+        $('#conversation03').text("あなたから感じるそのデザイナー的な雰囲気、ま、まさか！！");
+        chapter03_story = chapter03_story + 1;
+    }else if (chapter03_story == 6) {
+        $('#talker03').text("？？？");
+        $('#conversation03').text("さすが鋭いですね。実は私.......");
+        chapter03_story = chapter03_story + 1;
+    } else if (chapter03_story == 7) {
+        $('#stage_name03').css('opacity','1.0');
+        $('#talker03').text("応募者");
+        $('#conversation03').text("前職は Orange社 でUI/UXデザイナーをしていました。");
+        chapter03_story = chapter03_story + 1;
+    }else if (chapter03_story == 8) {
+        $('#talker03').text("応募者");
+        $('#conversation03').text("面接よろしくお願いします！");
+        chapter03_story = chapter03_story + 1;
+    }else if (chapter03_story == 9) {
+        $('#talker03').text("あなた");
+        $('#conversation03').text("キタ＝＝＝＝＝＝！");
+        chapter03_story = chapter03_story + 1;
+    }else if (chapter03_story == 10) {
         $('#talker03').text("");
         $('#conversation03').text("");
         $('.start_occupation').show();
         chapter03_story = chapter03_story + 1;
-    } else if (chapter03_story == 2) {
+    } else if (chapter03_story == 11) {
         $('#conversation03').hide();
         $('.start_occupation').hide();
         $('#cp_03_choice_box').show();
         $('#next_text_btn_03').hide();
-    } else {
+    } else if (chapter03_story == 12) {
+        $('#talker03').text("あなた");
+        $('#conversation03').text("よし、心強い仲間ができたぞ！");
+        chapter03_story = chapter03_story + 1;
+    } else if (chapter03_story == 13) {
+        $('#talker03').text("あなた");
+        $('#conversation03').text("さっそく、デザインの打ち合わせをしよう！");
+        chapter03_story = chapter03_story + 1;
+    }else {
         $('.cp_03_wrapper').hide();
         $('.cp_04_wrapper').show();
 
@@ -60,7 +106,7 @@ $('#next_text_btn_03').click(function () {
 function successMatching03() {
     $('#cp_03_choice_box').hide();
     $('#next_text_btn_03').show();
-    $('#conversation03').text("採用成功だ！次はフロントエンジニア採用に進もう！");
+    $('#conversation03').text("マッチ成功！ << UI/UXデザイナーが仲間になった。>> ");
     $('#conversation03').show();
     chapter03_story = chapter03_story + 1;
     console.log('マッチ成功');
@@ -72,7 +118,7 @@ function successMatching03() {
 function missMatching03() {
     $('#cp_03_choice_box').hide();
     $('#next_text_btn_03').show();
-    $('#conversation03').text("残念だ、次の応募者に進もう。");
+    $('#conversation03').text("ミスマッチ、もう一度やり直そう。");
     $('#conversation03').show();
     chapter03_story = chapter03_story - 1;
     console.log('マッチ失敗');
@@ -115,15 +161,63 @@ let chapter04_story = 1;
 $('#next_text_btn_04').click(function () {
     console.log(chapter04_story);
     if (chapter04_story == 1) {
+        $('#talker04').text("あなた");
+        $('#conversation04').text("よし、大体のデザインや機能はまとまってきたぞ。");
+        chapter04_story = chapter04_story + 1;
+    } else if (chapter04_story == 2) {
+        $('#talker04').text("あなた");
+        $('#conversation04').text("さて、プログラミングなるもので実際にWEB上に描いてみよう。");
+        chapter04_story = chapter04_story + 1;
+    } else if (chapter04_story == 3) {
+        $('#talker04').text("あなた");
+        $('#conversation04').text("HTML? CSS? さっぱり分からん。");
+        chapter04_story = chapter04_story + 1;
+    } else if (chapter04_story == 4) {
+        $('#talker04').text("あなた");
+        $('#conversation04').text("せめてチーズアカデミーを作っていればどうにかなった気がするのだが。");
+        chapter04_story = chapter04_story + 1;
+    } else if (chapter04_story == 5) {
+        $('#talker04').text("？？？");
+        $('#conversation04').text("ブツブツブツ.......。");
+        chapter04_story = chapter04_story + 1;
+    } else if (chapter04_story == 6) {
+        $('#talker04').text("あなた");
+        $('#conversation04').text("！？！？");
+        chapter04_story = chapter04_story + 1;
+    } else if (chapter04_story == 7) {
+        $('#talker04').text("？？？");
+        $('#conversation04').text("justify-content:center; , align-items......。");
+        chapter04_story = chapter04_story + 1;
+    } else if (chapter04_story == 8) {
+        $('#talker04').text("あなた");
+        $('#conversation04').text("もしかして......。");
+        chapter04_story = chapter04_story + 1;
+    } else if (chapter04_story == 9) {
+        $('#talker04').text("？？？");
+        $('#conversation04').text("jQuery....コンポーネント........。");
+        chapter04_story = chapter04_story + 1;
+    } else if (chapter04_story == 10) {
+        $('#stage_name04').css('opacity','1.0');
+        $('#talker04').text("あなた");
+        $('#conversation04').text("野生のフロントエンドジニアだ！！ 仲間になってくれ！");
+        chapter04_story = chapter04_story + 1;
+    } else if (chapter04_story == 11) {
         $('#talker04').text("");
         $('#conversation04').text("");
         $('.start_occupation').show();
         chapter04_story = chapter04_story + 1;
-    } else if (chapter04_story == 2) {
+    }else if (chapter04_story == 12) {
         $('#conversation04').hide();
         $('.start_occupation').hide();
         $('#cp_04_choice_box').show();
         $('#next_text_btn_04').hide();
+    } else if (chapter04_story == 13) {
+        $('#talker04').text("あなた");
+        $('#conversation04').text("よし、フロントエンドエンジニアを仲間できたぞ！");
+        chapter04_story = chapter04_story + 1;
+    } else if (chapter04_story == 14) {
+        $('#conversation04').text("さっそく、ニックネームをつけよう！");
+        chapter04_story = chapter04_story + 1;
     } else {
         $('.cp_04_wrapper').hide();
         $('.cp_05_wrapper').show();
@@ -137,7 +231,7 @@ $('#next_text_btn_04').click(function () {
 function successMatching04() {
     $('#cp_04_choice_box').hide();
     $('#next_text_btn_04').show();
-    $('#conversation04').text("採用成功だ！次はサーバーエンジニア採用に進もう！");
+    $('#conversation04').text("マッチ成功！ << フロントエンドエンジニアが仲間になった。>> ");
     $('#conversation04').show();
     chapter04_story = chapter04_story + 1;
     console.log('マッチ成功');
@@ -149,7 +243,7 @@ function successMatching04() {
 function missMatching04() {
     $('#cp_04_choice_box').hide();
     $('#next_text_btn_04').show();
-    $('#conversation04').text("残念だ、次の応募者に進もう。");
+    $('#conversation04').text("ミスマッチ、もう一度やり直そう。");
     $('#conversation04').show();
     chapter04_story = chapter04_story - 1;
     console.log('マッチ失敗');
@@ -187,13 +281,33 @@ $('#04_skill_btn').click(function () {
 
 
 
-// chapter05
+// chapter05 サーバーサイドエンジニア編
 let chapter05_story = 1;
 $('#next_text_btn_05').click(function () {
     console.log(chapter05_story);
     if (chapter05_story == 1) {
-        $('#talker05').text("");
-        $('#conversation05').text("");
+        $('#talker05').text("あなた");
+        $('#conversation05').text("よし、かなり見た目が整ってきたな。");
+        chapter05_story = chapter05_story + 1;
+    } else if (chapter05_story == 2) {
+        $('#talker05').text("あなた");
+        $('#conversation05').text("あとは、データを扱いたいから、サーバーサイドエンジニアも必要だ。");
+        chapter05_story = chapter05_story + 1;
+    } else if (chapter05_story == 2) {
+        $('#talker05').text("？？？");
+        $('#conversation05').text("ブツブツブツブツ...........。");
+        chapter05_story = chapter05_story + 1;
+    } else if (chapter05_story == 2) {
+        $('#talker05').text("あなた");
+        $('#conversation05').text("！？！？");
+        chapter05_story = chapter05_story + 1;
+    } else if (chapter05_story == 2) {
+        $('#talker05').text("？？？");
+        $('#conversation05').text("コンパイラ......インタラプラ........。");
+        chapter05_story = chapter05_story + 1;
+    } else if (chapter05_story == 2) {
+        chapter05_story = chapter05_story + 1;
+    } else if (chapter05_story == 2) {
         $('.start_occupation').show();
         chapter05_story = chapter05_story + 1;
     } else if (chapter05_story == 2) {
@@ -226,7 +340,7 @@ function successMatching05() {
 function missMatching05() {
     $('#cp_05_choice_box').hide();
     $('#next_text_btn_05').show();
-    $('#conversation05').text("残念だ、次の応募者に進もう。");
+    $('#conversation05').text("ミスマッチ、もう一度やり直そう。");
     $('#conversation05').show();
     chapter05_story = chapter05_story - 1;
     console.log('マッチ失敗');

@@ -1,6 +1,6 @@
 
 // 現在のステージ位置を記録する変数
-let currentStage = 1;
+// let currentStage = 1;
 
 // マッチング成功時に、次のステージデータを示すための関数
 function nextStage() {

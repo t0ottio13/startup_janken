@@ -212,7 +212,7 @@ $('#next_text_btn_04').click(function () {
         $('.start_occupation').show();
         chapter04_story = chapter04_story + 1;
     } else if (chapter04_story == 12) {
-        $('#talker04').text("質問: 支給されるPCのOSは何ですか？");
+        $('#talker04').text("");
         $('#conversation04').hide();
         $('.start_occupation').hide();
         $('#cp_04_choice_box').show();
@@ -336,7 +336,7 @@ $('#next_text_btn_05').click(function () {
         $('.start_occupation').show();
         chapter05_story = chapter05_story + 1;
     } else if (chapter05_story == 10) {
-        $('#talker05').text("質問: 使用言語は何ですか？");
+        $('#talker05').text("");
         $('#conversation05').hide();
         $('.start_occupation').hide();
         $('#cp_05_choice_box').show();
@@ -366,19 +366,6 @@ $('#next_text_btn_05').click(function () {
     console.log(chapter05_story);
 });
 
-// 面接の選択肢
-// マッチ成功の時の処理
-function successMatching05() {
-    $('#cp_05_choice_box').hide();
-    $('#next_text_btn_05').show();
-    $('#matching_result_success05').show();
-    $('#conversation05').text("マッチ成功！ << サーバーサイドエンジニアが仲間になった。>> ");
-    $('#conversation05').show();
-    chapter05_story = chapter05_story + 1;
-    console.log('マッチ成功');
-    console.log('ステージ' + currentStage + 'に進みます。');
-    return;
-}
 
 // マッチ失敗の時の処理
 function missMatching05() {
@@ -465,17 +452,17 @@ $('#next_text_btn_06').click(function () {
 
 // 面接の選択肢
 // マッチ成功の時の処理
-function successMatching06() {
-    $('#cp_06_choice_box').hide();
-    $('#next_text_btn_06').show();
-    $('#matching_result_success06').show();
-    $('#conversation06').text("採用成功だ！次は営業採用に進もう！");
-    $('#conversation06').show();
-    chapter06_story = chapter06_story + 1;
-    console.log('マッチ成功');
-    console.log('ステージ' + currentStage + 'に進みます。');
-    return;
-}
+// function successMatching06() {
+//     // $('#cp_06_choice_box').hide();
+//     // $('#next_text_btn_06').show();
+//     // $('#matching_result_success06').show();
+//     // $('#conversation06').text("採用成功だ！次は営業採用に進もう！");
+//     // $('#conversation06').show();
+//     // chapter06_story = chapter06_story + 1;
+//     // console.log('マッチ成功');
+//     // console.log('ステージ' + currentStage + 'に進みます。');
+//     return;
+// }
 
 // マッチ失敗の時の処理
 function missMatching06() {
@@ -489,33 +476,33 @@ function missMatching06() {
     console.log('リトライ画面に進みます。')
 }
 
-$('#06_money_btn').click(function () {
-    interview();
-    if (currentStage == 5) {
-        successMatching06();
-    } else {
-        missMatching06();
-    }
-    return;
-})
-$('#06_free_btn').click(function () {
-    interview();
-    if (currentStage == 5) {
-        successMatching06();
-    } else {
-        missMatching06();
-    }
-    return;
-})
-$('#06_skill_btn').click(function () {
-    interview();
-    if (currentStage == 5) {
-        successMatching06();
-    } else {
-        missMatching06();
-    }
-    return;
-})
+// $('#06_money_btn').click(function () {
+//     interview();
+//     if (currentStage == 5) {
+//         successMatching06();
+//     } else {
+//         missMatching06();
+//     }
+//     return;
+// })
+// $('#06_free_btn').click(function () {
+//     interview();
+//     if (currentStage == 5) {
+//         successMatching06();
+//     } else {
+//         missMatching06();
+//     }
+//     return;
+// })
+// $('#06_skill_btn').click(function () {
+//     interview();
+//     if (currentStage == 5) {
+//         successMatching06();
+//     } else {
+//         missMatching06();
+//     }
+//     return;
+// })
 // ここまでがChapter06
 
 
@@ -545,17 +532,17 @@ $('#next_text_btn_07').click(function () {
 
 // 面接の選択肢
 // マッチ成功の時の処理
-function successMatching07() {
-    $('#cp_07_choice_box').hide();
-    $('#next_text_btn_07').show();
-    $('#matching_result_success').show();
-    $('#conversation07').text("採用成功だ！これで、WEBサービスが開発できる！");
-    $('#conversation07').show();
-    chapter07_story = chapter07_story + 1;
-    console.log('マッチ成功');
-    console.log('ステージ' + currentStage + 'に進みます。');
-    return;
-}
+// function successMatching07() {
+//     $('#cp_07_choice_box').hide();
+//     $('#next_text_btn_07').show();
+//     $('#matching_result_success').show();
+//     $('#conversation07').text("採用成功だ！これで、WEBサービスが開発できる！");
+//     $('#conversation07').show();
+//     chapter07_story = chapter07_story + 1;
+//     console.log('マッチ成功');
+//     console.log('ステージ' + currentStage + 'に進みます。');
+//     return;
+// }
 
 // マッチ失敗の時の処理
 function missMatching07() {

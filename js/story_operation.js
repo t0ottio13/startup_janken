@@ -336,6 +336,7 @@ $('#next_text_btn_05').click(function () {
         $('.start_occupation').show();
         chapter05_story = chapter05_story + 1;
     } else if (chapter05_story == 10) {
+        $('#talker05').text("質問: 使用言語は何ですか？");
         $('#conversation05').hide();
         $('.start_occupation').hide();
         $('#cp_05_choice_box').show();
@@ -529,6 +530,7 @@ $('#next_text_btn_07').click(function () {
         $('.start_occupation').show();
         chapter07_story = chapter07_story + 1;
     } else if (chapter07_story == 2) {
+        $('#talker07').text("質問: 勤務地はどこですか？");
         $('#conversation07').hide();
         $('.start_occupation').hide();
         $('#cp_07_choice_box').show();

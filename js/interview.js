@@ -26,18 +26,18 @@ function interview() {
     console.log(randomNumber + "=>");
 
     if (randomNumber === 0) {
-        $('#occupation').text(nextStage);
-        $('#applicant_request').text('お金');
-        $('#matching').text('マッチング大成功!!');
+        // $('#occupation').text(nextStage);
+        // $('#applicant_request').text('お金');
+        // $('#matching').text('マッチング大成功!!');
         currentStage = currentStage + 1;
     } else if (randomNumber === 1) {
-        $('#occupation').text(nextStage);
-        $('#applicant_request').text('スキルアップ');
-        $('#matching').text('妥協したようです。');
+        // $('#occupation').text(nextStage);
+        // $('#applicant_request').text('スキルアップ');
+        // $('#matching').text('妥協したようです。');
         currentStage = currentStage + 1;
     } else {
-        $('#applicant_request').text('自由');
-        $('#matching').text('ミスマッチです。');
+        // $('#applicant_request').text('自由');
+        // $('#matching').text('ミスマッチです。');
     }
 }
 

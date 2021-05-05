@@ -316,10 +316,10 @@ main{
 /* ここまで  チャプター04の設定 */
 
 
-/*   チャプター05の設定 */
+/*   チャプター05の設定 サーバーサイドエンジニア*/
 .cp_05_wrapper {
     /* display: none; */
-    background-image: url(../img/chapter_front.png);
+    background-image: url(../img/chapter03.jpeg);
     background-size: cover;
 }
 .screen05 h5{

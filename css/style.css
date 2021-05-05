@@ -45,6 +45,9 @@ main{
 .screen_model {
     height: 300px;
     width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
 }
 
 /* テキストボックスや選択肢を表示する */
@@ -129,7 +132,7 @@ main{
 /* 面接スタートのフォント */
 .start_occupation {
     font-size: 40px;
-    color: tomato;
+    color:lightsalmon;
     position: absolute;
     top: 20%;
     display: none;
@@ -138,21 +141,22 @@ main{
 /* 選択肢ボのデザイン */
 .choices_box {
     position: absolute;
-    top:0%;
     left: 0%;
-    height: 100%;
+    bottom: 0%;
+    height: 50%;
     width: 100%;
     display: none;
     /* background-color: wheat; */
 }
 .choices_box ul {
-    padding-top: 10px;
+    margin-top: 10px;
     margin: auto 0;
     /* background-color: violet; */
     display: flex;
     justify-content:center;
     align-items: center;
 }
+/* 選択肢ボタンのデザイン */
 .choices_box li{
     display: inline-block;
     color:black;
@@ -177,6 +181,38 @@ main{
     opacity: 0;
 }
 
+/* マッチングの成功、失敗の表示 */
+/* success */
+.matching_result_success {
+    color: tomato;
+    font-size: 110px;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transform:rotate(-15deg);
+    display: none;
+}
+/* miss */
+.matching_result_miss {
+    color: cornflowerblue;
+    font-size: 90px;
+    position: absolute;
+    top: 40%;
+    left: 32%;
+    transform:rotate(-15deg);
+    display: none;
+}
+
+/* ゲームの成功メッセージ */
+.game_story_success {
+    color:#FF8C00;
+    font-size: 82px;
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    transform:rotate(-15deg);
+    display: none;
+}
 
 
 /* ここまで ゲーム画面の基本設定 */
@@ -238,9 +274,6 @@ main{
     background-image: url(../img/chapter_idea.jpeg);
     background-size: cover;
 }
-.screen01 {
-
-}
 /* ここまで  チャプター01の設定 */
 
 
@@ -248,7 +281,8 @@ main{
 /*   チャプター02の設定 */
 .cp_02_wrapper {
     /* display: none; */
-    background-image: url(../img/office_bg.png);
+    background-image: url(../img/chapter_idea.jpeg);
+    background-size: cover;
 }
 .screen02 {
     background-color:rgba(0, 0, 0, 0.5);
@@ -306,19 +340,16 @@ main{
 /*   チャプター07の設定 */
 .cp_07_wrapper {
     /* display: none; */
-    background-image: url(../img/office_bg.png);
-}
-.screen07 h5{
+    background-image: url(../img/chapter07.jpeg);
+    background-size: cover;
 }
 /* ここまで  チャプター07の設定 */
 
 /*   チャプター08の設定 */
 .cp_08_wrapper {
     /* display: none; */
-    background-image: url(../img/office_bg.png);
-}
-
-.screen08 h5{
+    background-image: url(../img/chapter08.jpeg);
+    background-size: cover;
 }
 /* ここまで  チャプター08の設定 */
 

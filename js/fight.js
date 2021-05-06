@@ -19,7 +19,24 @@ function randomNumber() {
     return randomNumber;
 }
 
-
+function loseRoute(){
+    if (currentStage === 1) {
+        $('#matching_result_miss03').show();
+        $('#conversation03').text("負けてしまった。 目の前が真っ暗になった。");
+    } else if (currentStage === 2) {
+        $('#matching_result_miss04').show();
+        $('#conversation04').text("負けてしまった。 目の前が真っ暗になった。");
+    } else if (currentStage === 3) {
+        $('#matching_result_miss05').show();
+        $('#conversation05').text("負けてしまった。 目の前が真っ暗になった。");
+    } else if (currentStage === 4) {
+        $('#matching_result_miss06').show();
+        $('#conversation06').text("負けてしまった。 目の前が真っ暗になった。");
+    } else if (currentStage === 5) {
+        $('#matching_result_miss07').show();
+        $('#conversation07').text("負けてしまった。 目の前が真っ暗になった。");
+    }
+}
 
 
 
@@ -27,6 +44,10 @@ function validationJudge() {
     // プレイヤーが負けた時の処理
     if (playerHp <= 0) {
         console.log('負け');
+        loseRoute();
+        setTimeout(function () {
+        location.reload();
+    }, 3000);
     } else if (applicantHp <= 0) {
         $('.battle_conversation').text("");
         currentStage = currentStage + 1;
@@ -131,7 +152,7 @@ function applicantHandCharge() {
     if (currentStage === 1) {
         $('#conversation03').text("相手は たくわえている。");
     } else if(currentStage === 2){
-        $('#conversation04').text("相手は たくわえている。!");
+        $('#conversation04').text("相手は たくわえている。");
     } else if(currentStage === 3){
         $('#conversation05').text("相手は たくわえている。");
     } else if(currentStage === 4){

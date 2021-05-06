@@ -1,10 +1,3 @@
-負けた時のストーリー
-function gameOver(){
-    setTimeout(function () {
-        location.reload();
-    }, 5000);
-}
-
 // chapter00
 $('#start_btn').click(function () {
         $('.cp_00_wrapper').hide();
@@ -50,40 +43,40 @@ $('#next_text_btn_03').click(function () {
     if (chapter03_story == 1) {
         $('#conversation03').text("とりあえずデザインだけでもと思っていたが、全く前に進まない。");
         chapter03_story = chapter03_story + 1;
-    }else  if (chapter03_story == 2) {
+    } else if (chapter03_story == 2) {
         $('#conversation03').text("ま、まずい、いきなりつまずいてしまいそうだ。");
         chapter03_story = chapter03_story + 1;
     } else if (chapter03_story == 3) {
         $('#talker03').text("？？？");
         $('#conversation03').text("どうやら、お困りのようですね。");
         chapter03_story = chapter03_story + 1;
-    }else if (chapter03_story == 4) {
+    } else if (chapter03_story == 4) {
         $('#talker03').text("あなた");
         $('#conversation03').text("！？！？");
         chapter03_story = chapter03_story + 1;
-    }else if (chapter03_story == 5) {
+    } else if (chapter03_story == 5) {
         $('#talker03').text("あなた");
         $('#conversation03').text("あなたから感じるそのデザイナー的な雰囲気、ま、まさか！！");
         chapter03_story = chapter03_story + 1;
-    }else if (chapter03_story == 6) {
+    } else if (chapter03_story == 6) {
         $('#talker03').text("？？？");
         $('#conversation03').text("さすが鋭いですね。実は私.......");
         chapter03_story = chapter03_story + 1;
     } else if (chapter03_story == 7) {
-        $('#stage_name03').css('opacity','1.0');
+        $('#stage_name03').css('opacity', '1.0');
         $('#talker03').text("応募者");
         $('.person_box_bottom_right').css('opacity', '1.0');
         $('#conversation03').text("前職は Orange社 でUI/UXデザイナーをしていました。");
         chapter03_story = chapter03_story + 1;
-    }else if (chapter03_story == 8) {
+    } else if (chapter03_story == 8) {
         $('#talker03').text("応募者");
         $('#conversation03').text("面接よろしくお願いします！");
         chapter03_story = chapter03_story + 1;
-    }else if (chapter03_story == 9) {
+    } else if (chapter03_story == 9) {
         $('#talker03').text("あなた");
         $('#conversation03').text("キタ＝＝＝＝＝＝！");
         chapter03_story = chapter03_story + 1;
-    }else if (chapter03_story == 10) {
+    } else if (chapter03_story == 10) {
         $('#talker03').text("");
         $('#conversation03').text("");
         $('#matching_result_miss03').hide();
@@ -104,15 +97,11 @@ $('#next_text_btn_03').click(function () {
         $('#talker03').text("あなた");
         $('#conversation03').text("さっそく、デザインの打ち合わせをしよう！");
         chapter03_story = chapter03_story + 1;
-    } else if (chapter03_story == 14) {
+    } else{
         $('.person_box_bottom_right').css('opacity', '0');
         $('.person_box_top').css('opacity', '0');
         $('.cp_03_wrapper').hide();
         $('.cp_04_wrapper').show();
-    }else {
-        $('#talker03').text("あなた");
-        $('#conversation03').text("目の前が真っ暗になった。");
-        gameOver();
     }
     console.log(chapter03_story);
 });

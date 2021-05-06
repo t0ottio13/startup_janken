@@ -278,36 +278,53 @@ $('#next_text_btn_06').click(function () {
     if (chapter06_story == 1) {
         $('#talker06').text("あなた");
         $('#conversation06').text("さて、心強い仲間ができてデータも扱えるようになった。");
-        $('.start_occupation').show();
         chapter06_story = chapter06_story + 1;
     } else if (chapter06_story == 2) {
         $('#talker06').text("あなた");
         $('#conversation06').text("サーバーのデータ管理や、セキュリティーに関する人材も欲しいな。");
         chapter06_story = chapter06_story + 1;
     } else if (chapter06_story == 3) {
-        $('#talker06').text("");
-        $('#conversation06').text("");
+        $('#talker06').text("仲間");
+        $('#conversation06').text("大変です！何者かにハッキングされています！");
         chapter06_story = chapter06_story + 1;
     } else if (chapter06_story == 4) {
-        $('#talker06').text("");
-        $('#conversation06').text("");
+        $('#talker06').text("あなた");
+        $('#conversation06').text("何！！一体誰が！？");
         chapter06_story = chapter06_story + 1;
     } else if (chapter06_story == 5) {
-        $('#stage_name06').css('opacity','1.0');
-        $('#talker06').text("");
-        $('#conversation06').text("");
-        $('.person_box_top').css('opacity', '1.0');
-        $('.person_box_bottom_right').css('opacity', '1.0');
-        $('.start_occupation').show();
-        $('#matching_result_missing06').hide();
+        $('#talker06').text("？？？");
+        $('#conversation06').text("フッフッフッフ");
         chapter06_story = chapter06_story + 1;
     } else if (chapter06_story == 6) {
-        $('#conversation06').text("");
+        $('#talker06').text("あなた");
+        $('#conversation06').text("！？！？");
+        chapter06_story = chapter06_story + 1;
+    } else if (chapter06_story == 7) {
+        $('.person_box_bottom_right').css('opacity', '1.0');
+        $('#stage_name06').css('opacity','1.0');
+        $('#talker06').text("インフラエンジニア");
+        $('#conversation06').text("あまりにセキュリティがひどかったんで、ハッキングさせてもらったよ。");
+        chapter06_story = chapter06_story + 1;
+    } else if (chapter06_story == 8) {
+        $('#talker06').text("あなた");
+        $('#conversation06').text("なんてことを！ よし、勝負だ！");
+        chapter06_story = chapter06_story + 1;
+    } else if (chapter06_story == 9) {
         $('#talker06').hide();
+        $('#conversation06').text("");
+        $('.start_occupation').show();
+        chapter06_story = chapter06_story + 1;
+    } else if (chapter06_story == 10) {
         $('.start_occupation').hide();
         $('#cp_06_choice_box').show();
         $('#next_text_btn_06').hide();
-    } else {
+        $('.person_box_top').css('opacity', '1.0');
+    } else if (chapter06_story == 11) {
+        $('#matching_result_success06').hide();
+        $('#talker06').text("あなた");
+        $('#conversation06').text("これで今日から君も仲間だ！");
+        chapter06_story = chapter06_story + 1;
+    }  else {
         $('.person_box_top').css('opacity', '0');
         $('.person_box_bottom_right').css('opacity', '0');
         $('.cp_06_wrapper').hide();
@@ -325,18 +342,63 @@ let chapter07_story = 1;
 $('#next_text_btn_07').click(function () {
     console.log(chapter07_story);
     if (chapter07_story == 1) {
-        $('#talker07').text("");
-        $('#conversation07').text("");
-        $('.person_box_top').css('opacity', '1.0');
-        $('.person_box_bottom_right').css('opacity', '1.0');
-        $('.start_occupation').show();
+        $('#talker07').text("あなた");
+        $('#conversation07').text("...............。");
         chapter07_story = chapter07_story + 1;
     } else if (chapter07_story == 2) {
+        $('#talker07').text("あなた");
+        $('#conversation07').text("......。");
+        chapter07_story = chapter07_story + 1;
+    } else if (chapter07_story == 3) {
+        $('#talker07').text("あなた");
+        $('#conversation07').text("なんか、もうストーリーを描くのが辛くなってきたぞ！");
+        chapter07_story = chapter07_story + 1;
+    } else if (chapter07_story == 4) {
+        $('#talker07').text("あなた");
+        $('#conversation07').text("もういいや！流れでいったれ！");
+        chapter07_story = chapter07_story + 1;
+    } else if (chapter07_story == 5) {
+        $('#talker07').text("あなた");
+        $('#conversation07').text("次が、ラスボスの営業担当や！がんばらなんばい！");
+        $('.person_box_bottom_right').css('opacity', '1.0');
+        chapter07_story = chapter07_story + 1;
+    } else if (chapter07_story == 6) {
+        $('#talker07').text("あなた");
+        $('#conversation07').text("たくわえる と まもる をうまく使わなんとよかばい！");
+        chapter07_story = chapter07_story + 1;
+    } else if (chapter07_story == 7) {
+        $('#talker07').text("あなた");
+        $('#conversation07').text("それじゃあ、行ってみよー！");
+        chapter07_story = chapter07_story + 1;
+    } else if (chapter07_story == 8) {
+        $('#talker07').hide();
+        $('#conversation07').text("");
+        $('.start_occupation').show();
+        $('.person_box_top').css('opacity', '1.0');
+        chapter07_story = chapter07_story + 1;
+    } else if (chapter07_story == 9) {
         $('#talker07').hide();
         $('#conversation07').text("");
         $('.start_occupation').hide();
         $('#cp_07_choice_box').show();
         $('#next_text_btn_07').hide();
+    } else if (chapter07_story == 10) {
+        $('#matching_result_success07').hide();
+        $('#talker07').text("あなた");
+        $('#conversation07').text("すごい！すごすぎる！");
+        chapter07_story = chapter07_story + 1;
+    } else if (chapter07_story == 11) {
+        $('#talker07').text("あなた");
+        $('#conversation07').text("あの営業担当を仲間にするなんて！");
+        chapter07_story = chapter07_story + 1;
+    } else if (chapter07_story == 12) {
+        $('#talker07').text("あなた");
+        $('#conversation07').text("面接マスターの称号を与えよう！");
+        chapter07_story = chapter07_story + 1;
+    } else if (chapter07_story == 13) {
+        $('#talker07').text("あなた");
+        $('#conversation07').text("それでは、エンディングをどうぞ！");
+        chapter07_story = chapter07_story + 1;
     } else {
         $('.person_box_top').css('opacity', '0');
         $('.cp_07_wrapper').hide();
@@ -346,60 +408,6 @@ $('#next_text_btn_07').click(function () {
     console.log(chapter07_story);
 });
 
-// 面接の選択肢
-// マッチ成功の時の処理
-// function successMatching07() {
-//     $('#cp_07_choice_box').hide();
-//     $('#next_text_btn_07').show();
-//     $('#matching_result_success').show();
-//     $('#conversation07').text("採用成功だ！これで、WEBサービスが開発できる！");
-//     $('#conversation07').show();
-//     chapter07_story = chapter07_story + 1;
-//     console.log('マッチ成功');
-//     console.log('ステージ' + currentStage + 'に進みます。');
-//     return;
-// }
-
-// マッチ失敗の時の処理
-function missMatching07() {
-    $('#cp_07_choice_box').hide();
-    $('#next_text_btn_07').show();
-    $('#matching_result_miss').show();
-    $('#conversation07').text("残念だ、次の応募者に進もう。");
-    $('#conversation07').show();
-    chapter07_story = chapter07_story - 1;
-    console.log('マッチ失敗');
-    console.log('リトライ画面に進みます。')
-}
-
-$('#07_money_btn').click(function () {
-    interview();
-    if (currentStage == 6) {
-        successMatching07();
-    } else {
-        missMatching07();
-    }
-    return;
-})
-$('#07_free_btn').click(function () {
-    interview();
-    if (currentStage == 6) {
-        successMatching07();
-    } else {
-        missMatching07();
-    }
-    return;
-})
-$('#07_skill_btn').click(function () {
-    interview();
-    if (currentStage == 6) {
-        successMatching07();
-    } else {
-        missMatching07();
-    }
-    return;
-})
-// ここまでがChapter07
 
 
 //chapter08

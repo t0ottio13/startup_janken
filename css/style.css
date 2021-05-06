@@ -29,6 +29,11 @@ main{
     flex-direction: column;
 }
 
+/* 編集用スイッチ */
+.none_switch {
+    display: none;
+}
+
 /* ゲーム画面の基本設定 */
 .base_wrapper {
     height: 400px;

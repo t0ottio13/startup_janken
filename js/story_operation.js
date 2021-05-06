@@ -41,6 +41,7 @@ let chapter03_story = 1;
 $('#next_text_btn_03').click(function () {
     console.log(chapter03_story);
     if (chapter03_story == 1) {
+        $('#stage_name03').css('opacity', '1.0');
         $('#conversation03').text("とりあえずデザインだけでもと思っていたが、全く前に進まない。");
         chapter03_story = chapter03_story + 1;
     } else if (chapter03_story == 2) {
@@ -63,7 +64,6 @@ $('#next_text_btn_03').click(function () {
         $('#conversation03').text("さすが鋭いですね。実は私.......");
         chapter03_story = chapter03_story + 1;
     } else if (chapter03_story == 7) {
-        $('#stage_name03').css('opacity', '1.0');
         $('#talker03').text("応募者");
         $('.person_box_bottom_right').css('opacity', '1.0');
         $('#conversation03').text("前職は Orange社 でUI/UXデザイナーをしていました。");
@@ -74,7 +74,7 @@ $('#next_text_btn_03').click(function () {
         chapter03_story = chapter03_story + 1;
     } else if (chapter03_story == 9) {
         $('#talker03').text("あなた");
-        $('#conversation03').text("キタ＝＝＝＝＝＝！");
+        $('#conversation03').text("ぜひ、一緒にやろう！！");
         chapter03_story = chapter03_story + 1;
     } else if (chapter03_story == 10) {
         $('#talker03').text("");
@@ -105,8 +105,6 @@ $('#next_text_btn_03').click(function () {
     }
     console.log(chapter03_story);
 });
-
-
 // ここまで チャプター03
 
 
@@ -115,6 +113,7 @@ let chapter04_story = 1;
 $('#next_text_btn_04').click(function () {
     console.log(chapter04_story);
     if (chapter04_story == 1) {
+        $('#stage_name04').css('opacity', '1.0');
         $('#talker04').text("あなた");
         $('#conversation04').text("よし、大体のデザインや機能はまとまってきたぞ。");
         chapter04_story = chapter04_story + 1;
@@ -151,7 +150,6 @@ $('#next_text_btn_04').click(function () {
         $('#conversation04').text("jQuery....コンポーネント........。");
         chapter04_story = chapter04_story + 1;
     } else if (chapter04_story == 10) {
-        $('#stage_name04').css('opacity', '1.0');
         $('.person_box_bottom_right').css('opacity', '1.0');
         $('#talker04').text("あなた");
         $('#conversation04').text("野生のフロントエンドジニアだ！！ 仲間になってくれ！");
@@ -196,6 +194,7 @@ let chapter05_story = 1;
 $('#next_text_btn_05').click(function () {
     console.log(chapter05_story);
     if (chapter05_story == 1) {
+        $('#stage_name05').css('opacity','1.0');
         $('#talker05').text("あなた");
         $('#conversation05').text("よし、かなり見た目が整ってきたな。");
         chapter05_story = chapter05_story + 1;
@@ -221,7 +220,6 @@ $('#next_text_btn_05').click(function () {
         $('#conversation05').text("まさか、サーバーサイドエンジニア！？");
         chapter05_story = chapter05_story + 1;
     } else if (chapter05_story == 7) {
-        $('#stage_name05').css('opacity','1.0');
         $('#talker05').text("サーバーサイドエンジニア");
         $('#conversation05').text("初めまして、個人でSNSを開発しています。");
         chapter05_story = chapter05_story + 1;
@@ -276,6 +274,7 @@ let chapter06_story = 1;
 $('#next_text_btn_06').click(function () {
     console.log(chapter06_story);
     if (chapter06_story == 1) {
+        $('#stage_name06').css('opacity','1.0');
         $('#talker06').text("あなた");
         $('#conversation06').text("さて、心強い仲間ができてデータも扱えるようになった。");
         chapter06_story = chapter06_story + 1;
@@ -301,7 +300,6 @@ $('#next_text_btn_06').click(function () {
         chapter06_story = chapter06_story + 1;
     } else if (chapter06_story == 7) {
         $('.person_box_bottom_right').css('opacity', '1.0');
-        $('#stage_name06').css('opacity','1.0');
         $('#talker06').text("インフラエンジニア");
         $('#conversation06').text("あまりにセキュリティがひどかったんで、ハッキングさせてもらったよ。");
         chapter06_story = chapter06_story + 1;
@@ -342,6 +340,7 @@ let chapter07_story = 1;
 $('#next_text_btn_07').click(function () {
     console.log(chapter07_story);
     if (chapter07_story == 1) {
+        $('#stage_name07').css('opacity','1.0');
         $('#talker07').text("あなた");
         $('#conversation07').text("...............。");
         chapter07_story = chapter07_story + 1;
@@ -355,7 +354,7 @@ $('#next_text_btn_07').click(function () {
         chapter07_story = chapter07_story + 1;
     } else if (chapter07_story == 4) {
         $('#talker07').text("あなた");
-        $('#conversation07').text("もういいや！流れでいったれ！");
+        $('#conversation07').text("もういいや！勢いでいったれ！");
         chapter07_story = chapter07_story + 1;
     } else if (chapter07_story == 5) {
         $('#talker07').text("あなた");
@@ -364,7 +363,7 @@ $('#next_text_btn_07').click(function () {
         chapter07_story = chapter07_story + 1;
     } else if (chapter07_story == 6) {
         $('#talker07').text("あなた");
-        $('#conversation07').text("たくわえる と まもる をうまく使わなんとよかばい！");
+        $('#conversation07').text("たくわえる と まもる をうまく使うとよかばい！");
         chapter07_story = chapter07_story + 1;
     } else if (chapter07_story == 7) {
         $('#talker07').text("あなた");
@@ -377,7 +376,6 @@ $('#next_text_btn_07').click(function () {
         $('.person_box_top').css('opacity', '1.0');
         chapter07_story = chapter07_story + 1;
     } else if (chapter07_story == 9) {
-        $('#talker07').hide();
         $('#conversation07').text("");
         $('.start_occupation').hide();
         $('#cp_07_choice_box').show();
@@ -393,7 +391,7 @@ $('#next_text_btn_07').click(function () {
         chapter07_story = chapter07_story + 1;
     } else if (chapter07_story == 12) {
         $('#talker07').text("あなた");
-        $('#conversation07').text("面接マスターの称号を与えよう！");
+        $('#conversation07').text("面接バトルマスターの称号を与えよう！");
         chapter07_story = chapter07_story + 1;
     } else if (chapter07_story == 13) {
         $('#talker07').text("あなた");
@@ -403,6 +401,7 @@ $('#next_text_btn_07').click(function () {
         $('.person_box_top').css('opacity', '0');
         $('.cp_07_wrapper').hide();
         $('.cp_08_wrapper').show();
+        $('#stage_name08').css('opacity','1.0');
 
     }
     console.log(chapter07_story);
@@ -416,7 +415,6 @@ $('#next_text_btn_08').click(function () {
     console.log(chapter08_story);
     if (chapter08_story == 1) {
         $('#talker08').text("あなた");
-        $('#stage_name08').css('opacity','1.0');
         $('#conversation08').text("よし、できたぞ！ついにリリースだ！");
         chapter08_story = chapter08_story + 1;
     } else if (chapter08_story == 2) {
@@ -430,7 +428,7 @@ $('#next_text_btn_08').click(function () {
         chapter08_story = chapter08_story + 1;
     } else {
         $('.cp_08_wrapper').hide();
-        $('.cp_01_wrapper').show();
+        $('.cp_00_wrapper').show();
 
     }
     console.log(chapter07_story);

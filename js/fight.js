@@ -70,7 +70,7 @@ function validationJudge() {
             $('#conversation04').text("捕獲成功！ << フロントエンドエンジニアが仲間になった。>> ");
             $('#conversation04').show();
             applicantHp = 110;
-            playerHp = 100;
+            playerHp = 90;
             chapter04_story = chapter04_story + 1;
             console.log('勝利');
             console.log('ステージ' + currentStage + 'に進みます。');
@@ -78,10 +78,10 @@ function validationJudge() {
             $('#cp_05_choice_box').hide();
             $('#next_text_btn_05').show();
             $('#matching_result_success05').show();
-            $('#conversation05').text("マッチ成功！ << サーバーサイドエンジニアが仲間になった。>> ");
+            $('#conversation05').text("捕獲成功！ << サーバーサイドエンジニアが仲間になった。>> ");
             $('#conversation05').show();
-            applicantHp = 115;
-            playerHp = 100;
+            applicantHp = 120;
+            playerHp = 90;
             chapter05_story = chapter05_story + 1;
             console.log('マッチ成功');
             console.log('ステージ' + currentStage + 'に進みます。');
@@ -89,18 +89,19 @@ function validationJudge() {
             $('#cp_06_choice_box').hide();
             $('#next_text_btn_06').show();
             $('#matching_result_success06').show();
-            $('#conversation06').text("捕獲成功だ！次は営業採用に進もう！");
+            $('#conversation06').text("捕獲成功！ << インフラエンジニアが仲間になった。>>");
             $('#conversation06').show();
-            applicantHp = 120;
-            playerHp = 100;
+            applicantHp = 140;
+            playerHp = 80;
             chapter06_story = chapter06_story + 1;
             console.log('勝利');
             console.log('ステージ' + currentStage + 'に進みます。');
         } else if (currentStage == 6) {
             $('#cp_07_choice_box').hide();
             $('#next_text_btn_07').show();
-            $('#matching_result_success').show();
-            $('#conversation07').text("捕獲成功だ！これで、WEBサービスが開発できる！");
+            $('#talker07').show();
+            $('#matching_result_success07').show();
+            $('#conversation07').text("捕獲成功！ << 営業担当が仲間になった。>>");
             $('#conversation07').show();
             applicantHp = 100;
             playerHp = 100;
@@ -119,17 +120,17 @@ function validationHp () {
         $('#applicant_current_hp03').css('width', applicantHp + '%');
         $('#player_current_hp03').css('width', playerHp+ '%');
     } else if(currentStage === 2){
-        $('#applicant_current_hp04').css('width', applicantHp + '%');
-        $('#player_current_hp04').css('width', playerHp/105*100 + '%');
+        $('#applicant_current_hp04').css('width', applicantHp/105*100 + '%');
+        $('#player_current_hp04').css('width', playerHp + '%');
     } else if(currentStage === 3){
-        $('#applicant_current_hp05').css('width', applicantHp + '%');
-        $('#player_current_hp05').css('width', playerHp/110*100 + '%');
+        $('#applicant_current_hp05').css('width', applicantHp/110*100 + '%');
+        $('#player_current_hp05').css('width', playerHp/90*100 + '%');
     } else if(currentStage === 4){
-        $('#applicant_current_hp06').css('width', applicantHp+ '%');
-        $('#player_current_hp06').css('width', playerHp/115*100 + '%');
+        $('#applicant_current_hp06').css('width', applicantHp/120*100 + '%');
+        $('#player_current_hp06').css('width', playerHp/90*100 + '%');
     } else if(currentStage === 5){
-        $('#applicant_current_hp07').css('width', applicantHp+ '%');
-        $('#player_current_hp07').css('width', playerHp/120*100 + '%');
+        $('#applicant_current_hp07').css('width', applicantHp/140*100 + '%');
+        $('#player_current_hp07').css('width', playerHp/80*100 + '%');
     }
 }
 

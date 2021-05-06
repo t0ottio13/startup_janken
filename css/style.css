@@ -123,6 +123,7 @@ main{
     height: 20%;
     /* background-color: cadetblue; */
     padding-top: 14px;
+    opacity: 0;
 }
 
 .person_box_top p{
@@ -167,19 +168,48 @@ main{
 }
 
 .person_box_bottom_right{
+    opacity: 0;
+}
+
+/* 応募者デザイン */
+.person_box_bottom_right03{
     margin-left: 20%;
     background-image: url(../img/player_hogehoge.png);
     background-size: cover;
     object-fit: cover;
 }
-
-.person_box_bottom_left{
-    margin-right: 20%;
-    background-image: url(../img/moeru_man.png);
+.person_box_bottom_right04{
+    margin-left: 20%;
+    background-image: url(../img/applicant04.png);
+    background-size: cover;
+    object-fit: cover;
+}
+.person_box_bottom_right05{
+    margin-left: 20%;
+    background-image: url(../img/applicant05.png);
+    background-size: cover;
+    object-fit: cover;
+}
+.person_box_bottom_right06{
+    margin-left: 20%;
+    background-image: url(../img/applicant06.png);
+    background-size: cover;
+    object-fit: cover;
+}
+.person_box_bottom_right07{
+    margin-left: 20%;
+    background-image: url(../img/applicant07.png);
     background-size: cover;
     object-fit: cover;
 }
 
+/* プレイヤーのデザイン */
+.person_box_bottom_left{
+    margin-right: 20%;
+    background-image: url(../img/player.png);
+    background-size: cover;
+    object-fit: cover;
+}
 
 
 /* 面接スタートのフォント */

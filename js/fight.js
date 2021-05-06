@@ -21,11 +21,14 @@ function randomNumber() {
 
 
 
+
+
 function validationJudge() {
     // プレイヤーが負けた時の処理
     if (playerHp <= 0) {
         console.log('負け');
     } else if (applicantHp <= 0) {
+        $('.battle_conversation').text("");
         currentStage = currentStage + 1;
         if (currentStage == 2) {
             $('#next_text_btn_03').show();
@@ -109,6 +112,52 @@ function validationHp () {
     }
 }
 
+// 相手がこうげきと表示する
+function applicantHandAttack() {
+    if (currentStage === 1) {
+        $('#conversation03').text("相手は こうげきしてきた!!");
+    } else if(currentStage === 2){
+        $('#conversation04').text("相手は こうげきしてきた!!");
+    } else if(currentStage === 3){
+        $('#conversation05').text("相手は こうげきしてきた!!");
+    } else if(currentStage === 4){
+        $('#conversation06').text("相手は こうげきしてきた!!");
+    } else if(currentStage === 5){
+        $('#conversation07').text("相手は こうげきしてきた!!");
+    }
+}
+// 相手がたくわえていると表示する
+function applicantHandCharge() {
+    if (currentStage === 1) {
+        $('#conversation03').text("相手は たくわえている。");
+    } else if(currentStage === 2){
+        $('#conversation04').text("相手は たくわえている。!");
+    } else if(currentStage === 3){
+        $('#conversation05').text("相手は たくわえている。");
+    } else if(currentStage === 4){
+        $('#conversation06').text("相手は たくわえている。");
+    } else if(currentStage === 5){
+        $('#conversation07').text("相手は たくわえている。");
+    }
+}
+// 相手がまもっていると表示する
+function applicantHandDefense() {
+    if (currentStage === 1) {
+        $('#conversation03').text("相手は まもっている。");
+    } else if(currentStage === 2){
+        $('#conversation04').text("相手は まもっている。");
+    } else if(currentStage === 3){
+        $('#conversation05').text("相手は まもっている。");
+    } else if(currentStage === 4){
+        $('#conversation06').text("相手は まもっている。");
+    } else if(currentStage === 5){
+        $('#conversation07').text("相手は まもっている。");
+    }
+}
+
+
+
+
 
 
 // こうげき動作
@@ -116,6 +165,7 @@ function attackModel() {
     const playerAttack = 10 * playerCharge;
     const applicantAttack = randomNumber();
     if (applicantAttack === 0) {
+        applicantHandAttack();
         // 応募者はこうげき
         // playerの攻撃処理
         applicantHp = applicantHp - playerAttack;
@@ -123,7 +173,8 @@ function attackModel() {
         playerHp = playerHp - (10 * applicantCharge);
         applicantCharge = 1;
         console.log("＝応募者はこうげき＝")
-    } else if(applicantAttack === 1){
+    } else if (applicantAttack === 1) {
+        applicantHandCharge();
         // 応募者はたくわえる
         // playerの攻撃処理
         applicantHp = applicantHp - playerAttack;
@@ -131,6 +182,7 @@ function attackModel() {
         applicantCharge = applicantCharge * 1.5;
         console.log("＝応募者はたくわえる＝")
     } else {
+        applicantHandDefense();
         // 応募者はまもる
         // playerの攻撃は無効化される
         console.log("＝応募者はまもる＝")
@@ -149,17 +201,20 @@ function chargeModel() {
     playerCharge = playerCharge * 1.5;
     const applicantAttack = randomNumber();
     if (applicantAttack === 0) {
+        applicantHandAttack();
         // 応募者はこうげき
         // applicantの攻撃処理
         playerHp = playerHp - (10 * applicantCharge);
         applicantCharge = 1;
         console.log("＝応募者はこうげき＝")
-    } else if(applicantAttack === 1){
+    } else if (applicantAttack === 1) {
+        applicantHandCharge();
         // 応募者はたくわえる
         // 応募者の処理
         applicantCharge = applicantCharge * 1.5;
         console.log("＝応募者はたくわえる＝")
     } else {
+        applicantHandDefense();
         // 応募者はまもる
         // playerの攻撃は無効化される
         console.log("＝応募者はまもる＝")
@@ -176,15 +231,18 @@ function chargeModel() {
 function defenseModel() {
     const applicantAttack = randomNumber();
     if (applicantAttack === 0) {
+        applicantHandAttack();
         // 応募者はこうげき
         // applicantの攻撃処理
         applicantCharge = 1;
         console.log("＝応募者はこうげき＝")
-    } else if(applicantAttack === 1){
+    } else if (applicantAttack === 1) {
+        applicantHandCharge();
         // 応募者はたくわえる
         applicantCharge = applicantCharge * 1.5;
         console.log("＝応募者はたくわえる＝")
     } else {
+        applicantHandDefense();
         // 応募者はまもる
         // playerの攻撃は無効化される
         console.log("＝応募者はまもる＝")

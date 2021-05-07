@@ -19,7 +19,7 @@ $('#next_text_btn_01').click(function () {
         $('#conversation01').text("あのとき、ジーズアカデミーに通っていればよかったのだが。");
         chapter01_story = chapter01_story + 1;
     } else if (chapter01_story === 4) {
-        $('#conversation01').text("悩んでいてもしかたない、募集を出しながらWEBアプリを作ろう！！");
+        $('#conversation01').text("悩んでいてもしかたない、仲間を集めてWEBアプリを作ろう！！");
         chapter01_story = chapter01_story + 1;
     }else {
             $('.cp_01_wrapper').hide();
@@ -74,7 +74,7 @@ $('#next_text_btn_03').click(function () {
         chapter03_story = chapter03_story + 1;
     } else if (chapter03_story == 9) {
         $('#talker03').text("あなた");
-        $('#conversation03').text("ぜひ、一緒にやろう！！");
+        $('#conversation03').text("よし、面接バトルだ！");
         chapter03_story = chapter03_story + 1;
     } else if (chapter03_story == 10) {
         $('#talker03').text("");
